@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simuladores Web</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <form id="form-calor" onsubmit="event.preventDefault(); calcularEnfriamiento();">
+        <h2>Ejercicio 1: Ley de Enfriamiento</h2>
+        
+        <label for="t0">Temperatura inicial (T0):</label>
+        <input type="number" id="t0" value="120" step="any" required> <label for="ts">Temperatura del entorno (Ts):</label>
+        <input type="number" id="ts" value="38" step="any" required> <label for="k">Constante (k):</label>
+        <input type="number" id="k" value="0.45" step="any" required> <label for="t">Tiempo en horas (t):</label>
+        <input type="number" id="t" value="3" step="any" required> <button type="submit">Calcular Temperatura</button>
+        
+        <div id="resultado-calor" class="resultado"></div>
+    </form>
+
+    <form id="form-combinaciones" onsubmit="event.preventDefault(); calcularCombinaciones();">
+        <h2>Ejercicio 2: Calculador de Combinaciones</h2>
+        
+        <h3>Grupo 1</h3>
+        <label for="n1">n1:</label>
+        <input type="number" id="n1" value="59" required> <label for="r1">r1:</label>
+        <input type="number" id="r1" value="5" required> <h3>Grupo 2</h3>
+        <label for="n2">n2:</label>
+        <input type="number" id="n2" value="35" required> <label for="r2">r2:</label>
+        <input type="number" id="r2" value="1" required> <button type="submit">Calcular Combinaciones</button>
+        
+        <div id="resultado-combinaciones" class="resultado"></div>
+    </form>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
